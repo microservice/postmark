@@ -1,0 +1,86 @@
+oms: 1
+lifecycle:
+  startup:
+    command: ['postmark', 'foreground']
+info:
+  version: 0.1.0
+  title: Postmark
+  description: Allows interaction with the Postmark API
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+  contact:
+    name: Asyncy
+    url: https://asyncy.com
+    email: hello@asyncy.com
+actions:
+  send:
+    help: Send an email
+    http:
+      method: post
+      path: /send
+      port: 5000
+    arguments:
+      from:
+        help: The sender email address
+        type: string
+        in: requestBody
+        required: true
+      to:
+        help: The list of recipients
+        type: list
+        in: requestBody
+        required: true
+      message:
+        help: The email content
+        type: string
+        in: requestBody
+        required: true
+      message_type:
+        help: Whether the email content is html or plain text
+        type: string
+        in: requestBody
+        required: true
+      title:
+        help: The email subject
+        type: string
+        in: requestBody
+        required: false
+    output:
+      type: map
+      contentType: application/json
+  send_template:
+    help: Send an email with a template
+    http:
+      method: post
+      path: /send_template
+      port: 5000
+    arguments:
+      template:
+        help: The id of the template to be used
+        type: int
+        in: requestBody
+        required: true
+      data:
+        help: The template data to fill the template
+        type: map
+        in: requestBody
+        required: true
+      from:
+        help: The sender email address
+        type: string
+        in: requestBody
+        required: true
+      to:
+        help: The list of recipients
+        type: list
+        in: requestBody
+        required: true
+    output:
+      type: map
+      contentType: application/json
+environment:
+  server_token:
+    help: The server token to be used in requests
+    type: string
+    required: true
