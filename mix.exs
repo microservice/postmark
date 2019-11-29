@@ -27,7 +27,7 @@ defmodule Postmark.MixProject do
       {:distillery, "~> 1.5.2"},
       {:plug, "~> 1.0"},
       {:plug_cowboy, "~> 1.0"},
-      {:poison, "~> 3.1"},
+      {:poison, "~> 4.0"},
       {:tesla, "~> 1.2.1"}
     ]
   end
