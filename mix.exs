@@ -24,7 +24,7 @@ defmodule Postmark.MixProject do
     [
       {:confex, "~> 3.3.1"},
       {:cowboy, "~> 1.0.0"},
-      {:distillery, "~> 1.5.2"},
+      {:distillery, "~> 2.1.0"},
       {:plug, "~> 1.0"},
       {:plug_cowboy, "~> 1.0"},
       {:poison, "~> 3.1"},
