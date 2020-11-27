@@ -28,7 +28,7 @@ defmodule Postmark.MixProject do
       {:plug, "~> 1.0"},
       {:plug_cowboy, "~> 1.0"},
       {:poison, "~> 3.1"},
-      {:tesla, "~> 1.2.1"}
+      {:tesla, "~> 1.4.0"}
     ]
   end
 end
