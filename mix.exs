@@ -22,7 +22,7 @@ defmodule Postmark.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:confex, "~> 3.3.1"},
+      {:confex, "~> 3.5.0"},
       {:cowboy, "~> 1.0.0"},
       {:distillery, "~> 1.5.2"},
       {:plug, "~> 1.0"},
